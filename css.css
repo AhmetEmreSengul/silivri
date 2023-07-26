@@ -1,0 +1,535 @@
+body
+{
+   color: white;
+    height: clamp(12px, 10vh, 100vh);
+    width: clamp(900px, 150px, 1200px);
+    margin: 0 auto; 
+    background: rgb(49, 41, 100);
+    animation: slide 2s, blur 2s, fade 2s;
+}
+
+.div_box
+{
+    border-left: 1px solid white;    
+    border-right: 1px solid white;
+    box-shadow: 0 0 25px papayawhip;
+}
+
+html
+{
+    scroll-behavior: smooth;
+    font-size: 2rem;
+    text-align: center;
+    align-items: center;
+}
+
+body, html
+{
+    height: 100%;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
+}
+
+.bar
+{
+    color: white;
+    text-align:center;
+    padding:50px 80px;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    background-color: #1f1d1d;
+}
+
+/* ----WEATHER---- */
+
+.card
+{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height: 280px;
+    width: 350px;
+    background: linear-gradient(135deg, #00feba62, #5b548a60);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.search
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input
+{
+    border: 0;
+    outline: 0;
+    background-color: #ebfffc;
+    color: #555;
+    padding: 8px 20px;
+    height: 35px;
+    flex: 1;
+    margin-right: 16px;
+    margin-left: 5px;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+.search button
+{
+    position: relative;
+    top: 2px;
+    right: 5px;
+    border: 0;
+    outline: 0;
+    background:#ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button img
+{
+    width: 20px;
+}
+
+.weather_icon
+{
+    width: 170px;
+    margin-top: 30px;
+    position: relative;
+    bottom: 45px;
+    animation: icon_move 1s infinite;
+}
+
+.weather img
+{
+    width: 100px;
+}
+.weather h1
+{
+    font-size: 25px;
+    position: relative;
+    bottom: 90px;
+    color: white;
+}
+.weather h2
+{
+    position: relative;
+    bottom: 120px;
+    font-size: 25px;
+    color: white;
+}
+
+.details
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.city
+{
+    font-weight: lighter;
+}
+
+.col
+{
+    align-items: center;
+    position: relative;
+    bottom: 250px;
+    left: 13px;
+    color: white;
+}
+
+.col img
+{
+    width: 50px;
+    margin-right: 10px;   
+}
+
+.col_text
+{
+    position: relative;
+    bottom: 35px;
+}
+
+.humidity, .wind
+{
+    font-size: 20px;
+    margin-top: -6px;
+}
+
+
+/* ----LINKS---- */
+
+a:any-link
+{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover, a:focus
+{
+    animation: color-change 0.5s both , shadow-change 0.5s both;
+}
+
+/* ----HEADER---- */
+
+.text_intro{
+    
+    font-size: 1.5rem;
+    top: 240px;
+    left: 0;
+    color: #111;
+    position: relative;
+    padding: 1rem;
+}
+
+.clip
+{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2.5rem;
+    text-align: center;
+    background-image: url(./img/sea-blue.gif);
+    background-size: 25%;
+    -webkit-background-clip: text;
+    color: hsla(0, 0%, 0%, 0);
+    width: 60%;
+}
+
+.header__h1{
+    text-align: center;
+    padding: 0.25em 2.5%;
+    font-size: 4rem;
+    position: absolute;
+    bottom: 90%;
+    transform: translateX(25%);
+}
+
+.header__nav
+{
+    font-weight: bold; 
+    position: absolute;
+    bottom: 0%;
+    right: 3%;
+    width: 97%;
+}
+
+
+.header__ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 0.5rem 2.5%;
+    font-size: 2rem;
+    background: linear-gradient(135deg, #00feba62, #5b548a60);
+    backdrop-filter: blur(2px);
+    width: 98%;
+}
+
+/* ----ACTIVITES---- */
+
+table
+{
+    width: 100%;
+    padding: 1rem;
+    table-layout: fixed;
+    background-color:transparent;
+    font-size:25px;
+    color: #f7f7f7;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+.menu__header
+{
+    width: 100%;
+    padding: 0.5em;
+    border: ridge medium white;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 5px 5px 3px rgb(3, 3, 49);
+    backdrop-filter: blur(6px);
+}
+
+thead th:first-child{
+    border-top-left-radius: 15px;
+}
+
+thead th:last-child{
+    border-top-right-radius: 15px;
+    
+}
+
+tfoot td{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: ridge medium white;
+    color: white;
+    text-shadow: 5px 5px 3px rgb(3, 3, 49);
+    backdrop-filter: blur(6px);
+}
+
+.menu__item
+{
+   place-content: center;
+   border: ridge medium white;
+   color: white;
+   text-shadow: 5px 5px 3px rgb(3, 3, 49);
+   backdrop-filter: blur(6px);
+}
+
+.gif
+{   
+   float: left;
+}
+
+/* ----ABOUT---- */
+
+.text_about{
+    margin: auto;
+    font-size: 1.5rem;
+    color: white;
+    position: absolute;
+    padding: 1rem;
+    text-shadow: 5px 5px 3px rgb(3, 3, 49);
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ----BOTTOM PAGE---- */
+
+.footer
+{
+    position: sticky; 
+    color:#ddd;
+    text-align:center;
+    font-size: 1.5rem;
+    background-color: #1f1d1d;
+}
+
+.back
+{
+    color: white;
+    font-size: 1.5rem;
+    border-bottom: 1px solid white;
+}
+
+/* ----SUGGEST---- */
+
+.header__h1_contact
+{
+    text-align: center;
+    padding: 0.25em 2.5%;
+    font-size: 4rem;
+    position: relative;
+    bottom: 100px;
+}
+
+.header__nav_contact
+{
+    font-weight: bold; 
+    position: relative;
+    bottom: 80px;
+    right: 14px;
+    width: 100%;
+}
+
+.suggestion_form
+{
+    color:white;
+    font-size: 1.5rem;
+    text-shadow: 2px 3px 3px black;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: transparent;
+    width: 80%;
+}
+
+.suggestion_p
+{
+    margin: 0.75em 0;
+}
+
+.suggestion_input, .suggestion_textarea
+{
+    color: white;
+    border: 1px solid white;
+    padding: 0.80rem;
+    border-radius: 20px;
+    border-width: 3px;
+    width: 80%;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    
+}
+
+.suggestion_input:hover, .suggestion_textarea:hover
+{
+    animation: frosted 0.5s both;
+}
+
+.suggestion_button
+{
+    border: 0px solid black;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    padding: 0.5em;
+    border-radius: 25px;
+    background-color: white;
+    color: #333;  
+    font-size: 20px;
+    margin-bottom: 4em;
+    box-shadow: 0px 0px 0px;
+    
+}
+
+.suggestion_button:hover
+{
+    animation: button-change_shadow 0.35s both , button-change_color 0.25s both ;
+}
+
+.php_message
+{
+    color: white;
+    font-size: 2rem;
+    animation: php 1s infinite;
+    position: relative;
+    top: 50px;
+}
+/* ----PARALLAX---- */
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    height: 100%;
+  }
+  
+  .bgimg-1 {
+    background-image: url("./img/bird.JPG");
+    min-height: 600px;
+  }
+  
+  .bgimg-2 {
+    background-image: url("./img/kum.JPG");
+    min-height: 600px;
+  }
+  
+  .bgimg-3 {
+    background-image: url("./img/iskele.JPG");
+    min-height: 600px;
+  }
+
+  .bgimg-4 {
+    background-image: url("./img/contact_2.jpeg");
+    min-height: 600px;
+  }
+  
+  
+.caption {
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+  
+ 
+  /* Turn off parallax scrolling for tablets and phones */
+  @media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+      background-attachment: scroll;
+    }
+  }
+
+  /* ----ANIMATION---- */
+
+  @keyframes slide
+  {
+     0%{transform: translateY(100%);}
+     50%{transform: translateY(0%);}
+    100%{transform: translateY(0%);}
+  }
+  
+  @keyframes fade
+  {
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 1;}  
+  }
+  
+  @keyframes blur 
+  {
+    0%{filter: blur(5px);}
+    50%{filter: blur(0px);}
+    100%{filter: blur(0px);}
+  }
+  
+  @keyframes color-change {
+    0% { color: white; }
+    100% { color: rgb(0, 0, 0); }
+  }
+
+  @keyframes shadow-change
+  {
+    0% { text-shadow: 0px 0px 0px white; }
+    100% { text-shadow: 5px 7px 3px white;}
+  }
+
+  @keyframes button-change_shadow
+  {
+   100% { box-shadow: 0px 0px 15px papayawhip; }
+    0% { box-shadow: 0px 0px 0px ;}
+  }
+  
+  @keyframes button-change_color
+  {
+    0% {color:#333; background-color: white;}
+   100% { color:white; background-color: #333; }
+  }
+
+
+  @keyframes php
+  {
+    0%{transform: translateY(0);}
+    50%{transform: translateY(10px);}
+    100%{transform: translateY(0px);}
+  }
+
+  @keyframes frosted 
+  {
+    0%{backdrop-filter: blur(10px);}
+    100%{backdrop-filter: blur(15px);}
+  }
+
+  @keyframes icon_move
+  {
+    0%{transform: translateY(0);}
+    50%{transform: translateY(4px);}
+    100%{transform: translateY(0px);}
+  }
+
